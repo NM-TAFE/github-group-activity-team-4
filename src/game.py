@@ -12,7 +12,11 @@ class Game:
         """
         Check if there is a winner and return the winner character
         """
-    # Winning combinations
+        # Winning combinations
+        winning_combinations = [(0, 1, 2), (3, 4, 5), (6, 7, 8), (0, 3, 6), (1, 4, 7), (2, 5, 8), (0, 4, 8), (2, 4, 6)]
+        for a, b, c in winning_combinations:
+            if self.board[a] == self.board[b] == self.board[c] and self.board[a] != ' ':
+                return self.board[a]
         return None
 
 
