@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import unittest
 from src.game import Game
 from src.app import App
@@ -9,6 +8,3 @@ class TestGame(unittest.TestCase):
         assert game.check_winner() == 'X'
 
 
-=======
-# PLACEHOLDER SO FOLDER IS DETECTED BY GIT
->>>>>>> main
