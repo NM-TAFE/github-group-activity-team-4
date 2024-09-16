@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-from app import board
-
-=======
 from flask import Flask, render_template, request, redirect, url_for
->>>>>>> main
 
 class Game:
 
@@ -14,18 +9,6 @@ class Game:
     def check_winner(self):
         pass
 
-<<<<<<< HEAD
-
-    def check_winner(self):
-        # Winning combinations
-        return None
-
-    def check_draw(self):
-        return ' ' not in board
-
-    def play(self, cell):
-        ...
-=======
     def check_winner(self):
     # Winning combinations
         return None
@@ -46,4 +29,3 @@ class Game:
         self.current_player = 'X'
         self.board = [' ']* 9
         return redirect(url_for('index'))
->>>>>>> main
