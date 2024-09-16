@@ -36,6 +36,42 @@
   <section id="game">
 <h1>game<a class="headerlink" href="#game" title="Link to this heading">¶</a></h1>
 <p>This module the logic for the tic-tac-toe game.</p>
+<dl class="py class" id="module-game">
+<dt class="sig sig-object py" id="game.Game">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">game.</span></span><span class="sig-name descname"><span class="pre">Game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">board</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['</span> <span class="pre">',</span> <span class="pre">'</span> <span class="pre">',</span> <span class="pre">'</span> <span class="pre">',</span> <span class="pre">'</span> <span class="pre">',</span> <span class="pre">'</span> <span class="pre">',</span> <span class="pre">'</span> <span class="pre">',</span> <span class="pre">'</span> <span class="pre">',</span> <span class="pre">'</span> <span class="pre">',</span> <span class="pre">'</span> <span class="pre">']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_player</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'X'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#game.Game" title="Link to this definition">¶</a></dt>
+<dd><p>Game class to handle the game logic, acts independently of the Flask application</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="game.Game.check_draw">
+<span class="sig-name descname"><span class="pre">check_draw</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#game.Game.check_draw" title="Link to this definition">¶</a></dt>
+<dd><p>Check if the game is a draw</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="game.Game.check_winner">
+<span class="sig-name descname"><span class="pre">check_winner</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#game.Game.check_winner" title="Link to this definition">¶</a></dt>
+<dd><p>Check if there is a winner and return the winner character</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="game.Game.play">
+<span class="sig-name descname"><span class="pre">play</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cell</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#game.Game.play" title="Link to this definition">¶</a></dt>
+<dd><p>Play a move in the cell if it is empty</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>cell (int): The cell in the board to play the move on</p>
+</dd>
+<dt>Returns:</dt><dd><p>redirect: Redirect to the index page</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="game.Game.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#game.Game.reset" title="Link to this definition">¶</a></dt>
+<dd><p>Reset the game to its initial state</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
 

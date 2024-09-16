@@ -10,3 +10,4 @@ Contains the application's source code.
 
    app.rst
    game.rst
+   main.rst

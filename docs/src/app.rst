@@ -3,5 +3,5 @@ app
 
 This module contains the flask application.
 
-.. automodule:: src.app
+.. automodule:: app
    :members:
