@@ -7,9 +7,12 @@ class Game:
         self.current_player = current_player
 
     def check_winner(self):
+<<<<<<< HEAD
         pass
 
     def check_winner(self):
+=======
+>>>>>>> main
     # Winning combinations
         return None
 
@@ -28,4 +31,8 @@ class Game:
     def reset(self):
         self.current_player = 'X'
         self.board = [' ']* 9
+<<<<<<< HEAD
         return redirect(url_for('index'))
+=======
+        return redirect(url_for('index'))
+>>>>>>> main
