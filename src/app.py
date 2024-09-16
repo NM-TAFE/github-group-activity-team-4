@@ -1,3 +1,4 @@
+from game import Game
 from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
@@ -11,8 +12,8 @@ current_player = 'X'
 
 @app.route('/')
 def index():
-    winner = check_winner()
-    draw = check_draw()
+    winner = Game.check_winner()
+    draw = Game.check_draw()
     return render_template('index.html', board=board, current_player=current_player, winner=winner, draw=draw)
 
 
@@ -22,7 +23,7 @@ def play(cell):
     global current_player
     if board[cell] == ' ':
         board[cell] = current_player
-        if not check_winner():
+        if not Game.check_winner():
             current_player = 'O' if current_player == 'X' else 'X'
     return redirect(url_for('index'))
 
