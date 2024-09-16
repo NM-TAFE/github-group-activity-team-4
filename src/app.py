@@ -1,17 +1,17 @@
 from game import Game
 from flask import Flask, render_template, request, redirect, url_for
+from game import Game
 
-app = Flask(__name__)
+class App(Flask):
+    def __init__(self):
+        super().__init__(__name__)
+        self.game = Game()
 
-# Initialise game board and current player
-board = [' '] * 9
-current_player = 'X'
-
-# NOTE: you cannot use this answer in Portfolio Part 2
-
+app = App()
 
 @app.route('/')
 def index():
+<<<<<<< HEADgit
     winner = Game.check_winner()
     draw = Game.check_draw()
     return render_template('index.html', board=board, current_player=current_player, winner=winner, draw=draw)
@@ -35,6 +35,14 @@ def reset():
     current_player = 'X'
     return redirect(url_for('index'))
 
-
 if __name__ == '__main__':
     app.run(debug=True)
+
+    winner = app.game.check_winner()
+    draw = app.game.check_draw()
+
+        return render_template('index.html', board=app.game.board, current_player=app.game.current_player, winner=winner, draw=draw)
+
+app.route('/play/<int:cell>')(app.game.play)
+app.route('/reset')(app.game.reset)
+
