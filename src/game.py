@@ -11,6 +11,9 @@ class Game:
         self.board = board
         self.current_player = current_player
 
+    def check_winner(self):
+        pass
+
 <<<<<<< HEAD
 
     def check_winner(self):
